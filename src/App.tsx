@@ -33,6 +33,7 @@ function App() {
     <StyledApp>
       <AppContainer>
         <FlexBoxCol>
+          <h1>TONate 테스트 WebApp</h1>
           <FlexBoxRow>
             <TonConnectButton />
             <Button>
