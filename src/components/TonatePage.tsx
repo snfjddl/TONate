@@ -1,11 +1,19 @@
 import { MemberInfo, TonateInfo } from "../types";
 import { MemberInfoBox } from "./MemberInfoBox";
 import { RankingList } from "./RankingList";
+import { TonConnectButton } from "@tonconnect/ui-react";
+import { Button } from "./styled/styled";
+import { useTonConnect } from "../hooks/useTonConnect";
+import TonConnect from "@tonconnect/sdk";
+
 import styles from "./TonatePage.module.css";
+import { LoginBox } from "./LoginBox";
 
 interface TonatePageProps {}
 
 export function TonatePage<TonatePageProps>() {
+  const connector = useTonConnect();
+
   const memberInfo: MemberInfo = {
     totalBalance: 123.1,
     dollar: 369.3,
@@ -25,9 +33,13 @@ export function TonatePage<TonatePageProps>() {
   return (
     <div className={styles.tonatePage}>
       <span className={styles.title}>TONate</span>
+      {/* <TonConnectButton /> */}
 
-      <MemberInfoBox memberInfo={memberInfo}></MemberInfoBox>
-      <RankingList></RankingList>
+      {connector.network ? (
+        <MemberInfoBox memberInfo={memberInfo}></MemberInfoBox>
+      ) : (
+        <LoginBox></LoginBox>
+      )}
     </div>
   );
 }

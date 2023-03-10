@@ -11,8 +11,6 @@ interface MemberInfoBoxProps {
 export const MemberInfoBox: FC<MemberInfoBoxProps> = ({ memberInfo }) => {
   const { totalBalance, dollar, tonateHistoryList } = memberInfo;
 
-  console.log(tonateHistoryList);
-
   return (
     <div className={styles.memberInfoBox}>
       <div className={styles.memberInfo}>
