@@ -14,8 +14,6 @@ interface TonatePageProps {}
 export function TonatePage<TonatePageProps>() {
   const connector = useTonConnect();
 
-  console.log(connector);
-
   const memberInfo: MemberInfo = {
     totalBalance: 123.1,
     dollar: 369.3,
