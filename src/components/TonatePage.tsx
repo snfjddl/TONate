@@ -14,6 +14,8 @@ interface TonatePageProps {}
 export function TonatePage<TonatePageProps>() {
   const connector = useTonConnect();
 
+  console.log(connector);
+
   const memberInfo: MemberInfo = {
     totalBalance: 123.1,
     dollar: 369.3,
@@ -24,22 +26,19 @@ export function TonatePage<TonatePageProps>() {
       address: "address1",
       amount: 1000,
     },
-    {
-      address: "address2",
-      amount: 2000,
-    },
   ];
 
   return (
     <div className={styles.tonatePage}>
       <span className={styles.title}>TONate</span>
-      {/* <TonConnectButton /> */}
 
       {connector.network ? (
         <MemberInfoBox memberInfo={memberInfo}></MemberInfoBox>
       ) : (
         <LoginBox></LoginBox>
       )}
+
+      <RankingList tonateList={tonateList}></RankingList>
     </div>
   );
 }

@@ -14,9 +14,6 @@
 
 .memberInfoBox .memberInfo > div span {
   display: block;
-
-  font-family: "Roboto";
-  font-style: normal;
 }
 
 .memberInfoBox .memberInfo > div span:nth-child(1) {
