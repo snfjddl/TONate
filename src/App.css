@@ -2,6 +2,10 @@
   --font-color-default: white;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .app {
   position: relative;
   display: flex;
