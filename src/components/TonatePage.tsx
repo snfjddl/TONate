@@ -22,7 +22,7 @@ export function TonatePage<TonatePageProps>() {
   const tonateList: TonateInfo[] = [
     {
       address: "address1",
-      amount: 1000,
+      amount: 2000,
     },
   ];
 
