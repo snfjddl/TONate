@@ -30,7 +30,7 @@ export const MemberInfoBox: FC<MemberInfoBoxProps> = ({ memberInfo }) => {
           </span>
         </div>
         <div>
-          {tonateHistoryList.map((tonateHistory: unknown) => {
+          {tonateHistoryList.map((tonateHistory: number) => {
             return (
               <TonateHistoryBox
                 key={tonateHistory}
