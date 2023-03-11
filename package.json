@@ -35,6 +35,5 @@
     "@vitejs/plugin-react": "^3.0.1",
     "typescript": "^4.9.5",
     "vite": "^4.0.4"
-  },
-  "homepage": "https://snfjddl.github.io/TONate/"
+  }
 }
